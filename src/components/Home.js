@@ -30,26 +30,26 @@ export default function Home() {
         <div className="flex items-center w-[60%] justify-center ">
           <h2 className=" text-8xl font-bold  ">{Items ? Items.current.temp_c: "26"}&#x2103;</h2>
 
-          <div className="flex  flex-col ml-[40px] ">
-            <h1 className="text-5xl font-medium mb-[15px] ">{Items ? Items.location.name : ""}</h1>
+          <div className="flex  flex-col ml-[5%] ">
+            <h1 className="text-5xl font-medium mb-[5%] ">{Items ? Items.location.name : ""}</h1>
             <p className=" text-md font-regular ">
             {Items ? Items.location.localtime : "Date&Time"}
             </p>
           </div>
 
-          <div className="flex w-[180px] flex-col items-center">
+          <div className="flex w-[15%] flex-col items-center">
           <img src={Items ? Items.current.condition.icon:"h"} size={20} className="w-[100px] h-[90px] "/>
             <p className=" text-sm font-regular ">{Items ? Items.current.condition.text : "search"}</p>
           </div>
         </div>
 
-        <div className=" backdrop-blur-sm bg-[#4d83ab] w-[40%] py-[60px] px-[50px] font-regular text-xl text-[#95b9d0]">
+        <div className=" backdrop-blur-sm bg-[#4d83ab] w-[40%] py-[6%] px-[4%] font-regular text-xl text-[#95b9d0]">
           <div className="grid gap-10">
             <div className="grid gap-6">
               <div className="flex items-center">
               <input
                 type="text"
-                placeholder="Another location"
+                placeholder="Search another location"
                 className="bg-[#4d83ab] border-none outline-none "
 
                 onChange={e => setCity(e.target.value)}
@@ -65,17 +65,17 @@ export default function Home() {
             <div className="grid gap-6 ">
               <h1 className="text-white">Weather Details</h1>
 
-              <p>
-                Cloudy <span className="ml-[350px] text-white">{Items ? Items.current.cloud: "26"}%</span>
+              <p className="flex items-center justify-between px-10">
+                Cloudy <span className=" text-white">{Items ? Items.current.cloud: "26"}%</span>
               </p>
-              <p>
-                Humidity <span className="ml-[330px] text-white">{Items ? Items.current.humidity: "26"}%</span>
+              <p className="flex items-center justify-between px-10 ">
+                Humidity <span className=" text-white ">{Items ? Items.current.humidity: "26"}%</span>
               </p>
-              <p>
-                Wind <span className="ml-[350px] text-white">{Items ? Items.current.wind_kph: "26"}kph</span>
+              <p className="flex items-center justify-between px-10 ">
+                Wind <span className=" text-white">{Items ? Items.current.wind_kph: "26"}kph</span>
               </p>
-              <p>
-                Rain <span className="ml-[350px] text-white">{Items ? Items.current.pressure_mb: "26"}mb</span>
+              <p className="flex items-center justify-between px-10 ">
+                Rain <span className=" text-white">{Items ? Items.current.pressure_mb: "26"}mb</span>
               </p>
 
               <div className="h-[2px] w-[100%] bg-white mt-[30px]"></div>
